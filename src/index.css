@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-mavericks-black text-white min-h-screen;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(110, 66, 202, 0.15) 0%, transparent 70%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 1) 100%);
+  background-attachment: fixed;
+}
+
+@layer components {
+  .input-field {
+    @apply bg-black/40 border border-mavericks-purple/30 rounded-lg px-4 py-3 w-full 
+    focus:outline-none focus:ring-2 focus:ring-mavericks-purple/50 transition-all;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all;
+  }
+  
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-mavericks-purple to-mavericks-orange/90 
+    hover:from-mavericks-purple/90 hover:to-mavericks-orange/80 text-white shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-black/50 border border-mavericks-purple/30 hover:bg-black/70;
+  }
+
+  .agent-card {
+    @apply bg-black/50 border border-mavericks-purple/30 rounded-xl overflow-hidden 
+    hover:shadow-lg hover:shadow-mavericks-purple/20 transition-all duration-300;
+  }
+
+  .badge {
+    @apply px-3 py-1 text-xs rounded-full bg-mavericks-purple/20 text-mavericks-purple-light;
+  }
+}
